@@ -2,7 +2,16 @@
     <div>
         <!-- <input type="text" v-model="userId">
         <button @click="onLoadUser" >Load User</button> -->
-        When we input id and press the btn, It will lead to inputted "id"
+        <!-- When we input id and press the btn, It will lead to inputted "id" -->
+
+        <!-- We wanna load userId right below, the input button, on "/users" page-->
+        <!-- We have to create new file next to users folder, next to the folder,-->
+        <!-- Where we wanna create nested routing, newly created file has to have -->
+        <!-- same name, as the folder "users.vue" -->
+
+        <!-- So we made wrapper, users.vue  -->
+        <p>Please enter the ID and click the button</p>
+        <!-- So this will be replaced, by user.vue file once it is submitted -->
     </div>
 </template>
 
@@ -12,19 +21,19 @@
 
 <script>
 
-export default{
-    data() {
-        return {
-            userId: ''
-        }
-    },
-    // It is done programmaticaly:
-    methods: {
-        onLoadUser() {
-            // using simple vue router
-            this.$router.push('/users/' + this.userId)
-            // After btn clicked, id is passed here, and page is linked to "users/inputtedID"
-        }
-    }
-}
+// export default{
+//     data() {
+//         return {
+//             userId: ''
+//         }
+//     },
+//     // It is done programmaticaly:
+//     methods: {
+//         onLoadUser() {
+//             // using simple vue router
+//             this.$router.push('/users/' + this.userId)
+//             // After btn clicked, id is passed here, and page is linked to "users/inputtedID"
+//         }
+//     }
+// }
 </script>

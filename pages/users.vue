@@ -1,13 +1,23 @@
 <template>
+    <!-- So this file is a wrapper fro index file, and user folder,-->
+    <!--and other files, that we wanna load -->
+    <!-- If we wanna use Id input and btn, in nested files, we have to copy IT here -->
     <div>
         <input type="text" v-model="userId">
         <button @click="onLoadUser" >Load User</button>
-        <!-- When we input id and press the btn, It will lead to inputted "id" -->
+        <!-- THen we add special component -->
         <nuxt-child />
+        <!-- it simply marks the place where different sections of route are loaded -->
+        <!-- So we it shows input and btn, and child of users index file, which has text -->
+        <!-- So after writing any ID, loads any Id and injects it into nuxtChild and shows It -->
+        <!-- So, it is a nested route that we nest the content should be rendered into another page   -->
+        <!-- This usage is optional, when we have sub-routes in a wrapper, that should be changed in the same page -->
     </div>
 </template>
 
+<!-- Script also is copied  -->
 <script>
+
 export default{
     data() {
         return {
