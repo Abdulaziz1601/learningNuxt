@@ -3,8 +3,10 @@
     <!--and other files, that we wanna load -->
     <!-- If we wanna use Id input and btn, in nested files, we have to copy IT here -->
     <div>
-        <input type="text" v-model="userId">
-        <button @click="onLoadUser" >Load User</button>
+        <div class="input-wrapper">
+            <input type="text" v-model="userId">
+            <button @click="onLoadUser" >Load User</button>
+        </div>
         <!-- THen we add special component -->
         <nuxt-child />
         <!-- it simply marks the place where different sections of route are loaded -->
@@ -15,22 +17,28 @@
     </div>
 </template>
 
+
 <!-- Script also is copied  -->
 <script>
-
-export default{
-    data() {
-        return {
-            userId: ''
-        }
-    },
-    // It is done programmaticaly:
-    methods: {
-        onLoadUser() {
-            // using simple vue router
-            this.$router.push('/users/' + this.userId)
-            // After btn clicked, id is passed here, and page is linked to "users/inputtedID"
-        }
-    }
+    export default {
+        // If we wanna use users-header layout
+        layout: 'users',
+        data() {
+            return {
+                userId: ''
+            }
+        },
+        // It is done programmaticaly:
+        methods: {
+            onLoadUser() {
+                // using simple vue router
+                this.$router.push('/users/' + this.userId)
+                // After btn clicked, id is passed here, and page is linked to "users/inputtedID"
+            }
+        },
+        
+        // It looks for layout folder for users, If it finds It.
+        // It uses users layout instead of default one
+    
 }
 </script>

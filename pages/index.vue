@@ -1,5 +1,6 @@
 <template>
 	<section class="container">
+		<!-- Using header component -->
 		<!-- It relaods and goes to another page, but we wanna use it like SPA -->
 		<!-- <a href="/users">Users</a> -->
 		<!-- In vue we had to use router-link -->
@@ -15,5 +16,8 @@
 </template>
 
 <script>
-	export default {}
+	export default {
+		// If we wanna use users-header layout
+		layout: 'users'
+	}
 </script>

@@ -10,7 +10,10 @@
         <!-- same name, as the folder "users.vue" -->
 
         <!-- So we made wrapper, users.vue  -->
-        <p>Please enter the ID and click the button</p>
+        <div>
+            <!-- <Header /> -->
+            <p>Please enter the ID and click the button</p>
+        </div>
         <!-- So this will be replaced, by user.vue file once it is submitted -->
     </div>
 </template>
@@ -20,8 +23,12 @@
 -->
 
 <script>
+// import Header from '@/components/Header'
 
-// export default{
+export default{
+    // components: {
+			// Header
+		// },
 //     data() {
 //         return {
 //             userId: ''
@@ -35,5 +42,7 @@
 //             // After btn clicked, id is passed here, and page is linked to "users/inputtedID"
 //         }
 //     }
-// }
+    layout: 'users'
+
+}
 </script>

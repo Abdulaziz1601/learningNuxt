@@ -17,6 +17,7 @@ export default {
         // return data.params.id == 1
         // we can validate with regex also
         return /^\d+$/.test(data.params.id) // so, if id is not a number It will give us an error
-    }
+    },
+    layout: 'users'
 }
 </script>
